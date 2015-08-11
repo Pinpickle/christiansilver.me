@@ -1,0 +1,14 @@
+---
+layout: default
+title: Projects
+contact: true
+class: page-projects
+---
+<h1>Projects</h1>
+
+{% assign projects = site.projects|sort: 'date' %}
+<ul>
+{% for project in projects reversed %}
+  <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+{% endfor %}
+</ul>

@@ -40,32 +40,20 @@ excerpt_separator: '<!--more-->'
 exclude: [assets, bower]
 keep_files: [assets]
 
-# Collection settings
+# Collections
 collections:
-  lessons:
+  projects:
     output: true
-    permalink: /learn/:path/
-  lesson_collections:
-    output: true
-    permalink: /learn/:path/
+    permalink: /projects/:path/
 
 # Front matter defaults
 defaults:
   - scope:
-      path: ''
+      path: ""
+      type: "projects"
     values:
-      layout: 'default'
-      image: '/assets/img/kids-on-pi.jpg'
-  - scope:
-      path: ''
-      type: 'lesson_collections'
-    values:
-      layout: 'lesson_collection'
-  - scope:
-      path: ''
-      type: 'lessons'
-    values:
-      layout: 'lesson'
+      layout: "project"
+      big_header: true
 
 gems:
   - jekyll-sitemap
