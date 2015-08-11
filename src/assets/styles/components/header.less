@@ -3,22 +3,58 @@
    ========================================================================== */
 
 .site-header {
-  margin-bottom: 50px;
+  background: @brand-white;
 
-  padding: @punit 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   nav {
+    float: right;
+
     ul {
       padding: 0;
 
       list-style: none;
+      .clearfix;
     }
 
     li {
       display: block;
       float: left;
+    }
+  }
 
-      padding: 10px;
+  a {
+    display: inline-block;
+    padding: @punit;
+
+    position: relative;
+
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    &::before {
+      content: ' ';
+
+      position: absolute;
+      left: @punit;
+      top: 0;
+      right: @punit;
+      bottom: 0;
+
+      display: none;
+      box-sizing: border-box;
+
+      border-bottom: 5px solid #000;
+    }
+
+    &:hover, &:focus, .link-active {
+      &::before {
+        display: block;
+      }
     }
   }
 }
