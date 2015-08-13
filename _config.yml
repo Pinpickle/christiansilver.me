@@ -54,6 +54,11 @@ defaults:
     values:
       layout: "project"
       big_header: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
 
 gems:
   - jekyll-sitemap
