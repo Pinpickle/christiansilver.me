@@ -7,8 +7,8 @@ class: page-projects
 <h1>Projects</h1>
 
 {% assign projects = site.projects|sort: 'date' %}
-<ul>
+<ul class="projects-listing">
 {% for project in projects reversed %}
-  <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+  <li class="projects-listing-element"><a href="{{ project.url }}">{{ project.title }}</a></li>
 {% endfor %}
 </ul>

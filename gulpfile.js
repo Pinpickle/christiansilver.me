@@ -10,6 +10,7 @@ var merge = require('merge-stream');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var bulkify = require('bulkify');
 
 // AWS Deployment
 var fs = require('fs');
@@ -40,6 +41,7 @@ gulp.task('clean:scripts', function (cb) {
 
 gulp.task('scripts', ['clean:scripts'], function () {
   var main = browserify('./src/assets/scripts/main.js')
+    .transform(bulkify)
     .bundle()
     .on('error', onError)
     .pipe(source('main.js'))
@@ -266,7 +268,3 @@ gulp.task('deploy', function () {
 gulp.task('default', function () {
   sequence('build', 'watch', 'serve');
 });
-
-
-
-

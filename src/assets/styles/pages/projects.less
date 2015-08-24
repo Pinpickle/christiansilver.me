@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Projects Page
+   ========================================================================== */
+
+.projects-listing {
+  .grid-container;
+
+  list-style: none;
+  padding: 0;
+}
+
+.projects-listing-element {
+  .grid-element;
+
+  > a {
+    display: block;
+    height: 200px;
+  }
+}
+
+@media @small {
+  .projects-listing-element {
+    width: 50%;
+  }
+}
+
+@media @large {
+  .projects-listing-element {
+    width: 33%;
+  }
+}
