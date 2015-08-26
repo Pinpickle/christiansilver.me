@@ -1,10 +1,6 @@
 'use strict';
 var $ = require('jquery');
 var bulk = require('bulk-require');
-var jQBridget = require('jquery-bridget');
-var Masonry = require('masonry-layout');
-
-$.bridget('masonry', Masonry);
 
 var Silver = {
   contexts: { }
