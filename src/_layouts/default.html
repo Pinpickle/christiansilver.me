@@ -1,18 +1,20 @@
 ---
 layout: base
 ---
-<header class="site-header">
-  <a class="site-brand" href="/">CAS</a>
-  <nav>
-    <ul role="menu">
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-  </nav>
+<header class="site-header{% if page.header_image %} site-header-image{% endif %}">
+  <div class="site-header-content">
+    <a class="site-brand" href="/">CAS</a>
+    <nav>
+      <ul role="menu">
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav class="site-content">
+<main class="site-content{% if page.header_image %} site-content-header-image{% endif %}">
   <div class="wrapper-content">
     {{ content }}
   </div>
-</nav>
+</main>
