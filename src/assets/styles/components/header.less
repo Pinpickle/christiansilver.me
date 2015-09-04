@@ -1,14 +1,17 @@
 /* ==========================================================================
    Header
    ========================================================================== */
+@header-height: 60px;
 
 .site-header {
   background: @brand-white;
+  z-index: 50;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: @header-height;
 
   nav {
     float: right;
@@ -28,7 +31,9 @@
 
   a {
     display: inline-block;
-    padding: @punit;
+    padding: 0 @punit;
+    height: @header-height;
+    line-height: @header-height;
 
     position: relative;
 

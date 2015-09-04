@@ -2,8 +2,22 @@
    Projects Page
    ========================================================================== */
 
+.js .page_projects {
+  .site-content {
+    margin-top: @header-height;
+
+    > .wrapper-content {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+
+}
+
 .projects-listing {
-  .grid-container;
+  .clearfix;
   margin: 0;
 
   list-style: none;
@@ -11,7 +25,7 @@
 }
 
 .projects-listing-element {
-  .grid-element;
+  float: left;
   padding: 0;
   position: relative;
 
@@ -44,6 +58,6 @@
 
 @media @large {
   .projects-listing-element {
-    width: 33%;
+    width: 33.33%;
   }
 }
