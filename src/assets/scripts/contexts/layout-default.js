@@ -7,8 +7,6 @@ Silver.contexts.layoutDefault = function () {
   var headerTop = 0;
   var headerSnapped = false;
 
-  if ($())
-
   $(window).on('silver:resize', function () {
     headerTop = $headerContent.offset().top;
   });
@@ -24,6 +22,4 @@ Silver.contexts.layoutDefault = function () {
       }
     });
   }
-
-  // Any special home page logic goes here!
 };
