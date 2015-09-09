@@ -1,0 +1,33 @@
+.blog-listing {
+  list-style: none;
+  padding: 0;
+  margin: 0 -@punit / 2;
+}
+
+.blog-listing-element {
+  font-size: 2em;
+
+  a {
+    display: block;
+    color: @text-color;
+    border-radius: 5px;
+    padding: @punit / 2;
+
+    transition-property: background-color, box-shadow, transform;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: @brand-white;
+      transform: translate(0, -2px);
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.blog-listing-date {
+  font-size: 0.6em;
+  font-weight: normal;
+}
