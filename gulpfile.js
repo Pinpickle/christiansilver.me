@@ -75,8 +75,16 @@ gulp.task('styles', ['clean:styles'], function () {
 
 // Moving images over
 gulp.task('images', function () {
-  return gulp.src('src/assets/images/**/*.*')
+  return gulp.src('src/assets/images/**/*.*', { base: 'src/assets/images' })
     .pipe($.changed('serve/assets/img'))
+    .pipe($.if('**/project-thumbnails/**/*.*', $.imageResize({
+      width: 500,
+      height: 500,
+      crop: true,
+      upscale: true,
+      format: 'jpg',
+      quality: 0.8
+    })))
     .pipe(gulp.dest('serve/assets/img'))
     .pipe(reload({stream: true}));
 });
