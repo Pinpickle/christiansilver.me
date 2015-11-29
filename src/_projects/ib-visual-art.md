@@ -1,3 +1,0 @@
----
-title: IB Visual Art
----

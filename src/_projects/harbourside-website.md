@@ -1,3 +1,0 @@
----
-title: Harbourside Church Website
----

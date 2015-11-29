@@ -40,26 +40,6 @@ excerpt_separator: '<!--more-->'
 exclude: [assets, bower]
 keep_files: [assets]
 
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-# Front matter defaults
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-      big_header: true
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-
 gems:
   - jekyll-sitemap
 
